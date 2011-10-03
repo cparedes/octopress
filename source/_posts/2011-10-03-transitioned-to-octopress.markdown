@@ -12,9 +12,7 @@ So, I've transitioned from [Jekyll](https://github.com/mojombo/jekyll) to
 [Octopress](http://octopress.org).  It comes with a really nice default HTML5
 template that I've edited a bit (changed some fonts, colors, etc.), and has a
 decent fallback for mobile devices, all of which was lacking in my last site
-design with Jekyll (if anyone's interested, the [old
-site](https://github.com/cparedes/redbluemagenta-new) is still on my GitHub
-account.)
+design with Jekyll (if anyone's interested, the [old site](https://github.com/cparedes/redbluemagenta-new) is still on my GitHub account.)
 
 What's awesome about Octopress, anyway?
 
