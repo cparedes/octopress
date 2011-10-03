@@ -3,12 +3,12 @@ title: Converting Puppet Modules to Chef Cookbooks
 comments: true
 layout: post
 published: true
+date: 2011-09-20 00:10
 categories:
 - Systems Administration
 - Puppet
 - Chef
 - DevOps
-date: 2011-09-20 00:05:00
 ---
 
 Over a couple of caffeine induced nights, I've converted a handful of our
