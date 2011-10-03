@@ -179,7 +179,7 @@ naming convention and trying to stick with it throughout Puppet module
 development.  In this case, we have file specificity broken up by hosts,
 and so we can create the following folders and files in our Chef cookbook:
 
-{% codeblock lang:ruby %}
+{% codeblock %}
 foobar/files/host-host1.example.com/staticfile
 foobar/files/host-host2.example.com/staticfile
 foobar/files/default/staticfile
