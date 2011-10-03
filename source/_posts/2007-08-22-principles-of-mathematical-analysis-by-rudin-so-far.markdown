@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "\xE2\x80\x9CPrinciples of Mathematical Analysis\xE2\x80\x9D by Rudin, so far"
+title: "Principles of Mathematical Analysis by Rudin, so far"
 comments: true
 post_id: "298"
 categories:

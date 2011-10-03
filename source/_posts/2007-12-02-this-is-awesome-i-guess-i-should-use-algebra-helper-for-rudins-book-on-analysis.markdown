@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "This is awesome.  I guess I should use \xE2\x80\x9CAlgebra Helper\xE2\x80\x9D for Rudin\xE2\x80\x99s book on ANALYSIS"
+title: "This is awesome.  I guess I should use Algebra Helper for Rudin's book on ANALYSIS"
 comments: true
 post_id: "360"
 categories:

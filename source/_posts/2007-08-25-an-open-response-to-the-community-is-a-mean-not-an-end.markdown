@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "An open response to \xE2\x80\x9CThe community is a mean, not an end\xE2\x80\x9D"
+title: "An open response to 'The community is a mean, not an end'"
 comments: true
 post_id: "301"
 categories:
