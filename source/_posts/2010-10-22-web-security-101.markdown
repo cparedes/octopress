@@ -54,10 +54,11 @@ file nor a part of the group that owns the file.
 On UNIX, this is expressed in a three digit number attached to each file and
 directory.
 
-<pre><code>
+{% codeblock %}
 7    7    7
 |    |    |
-owner group world</code></pre>
+owner group world
+{% endcodeblock %}
 
 These numbers specify exactly what sort of permissions are applied to the file
 for each user, group, and everyone else.  (In this particular case, 777 =
@@ -91,7 +92,9 @@ In most FTP clients, you can right click the file and set the permissions
 within the FTP interface.  If you have a UNIX shell, you can execute
 the following command to change permissions on a specific file:
 
-<pre><code>$ chmod 744 [filename]</code></pre>
+{% codeblock %}
+$ chmod 744 [filename]
+{% endcodeblock %}
 
 How does this affect security when you're uploading HTML/CSS files to a web
 server?

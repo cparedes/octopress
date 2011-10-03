@@ -38,7 +38,7 @@ us to write things more clearly, but at the cost of flexibility - for example,
 the way I've been applying an action on each element of an array is by using
 "definitions":
 
-<pre><code>
+{% codeblock lang:ruby %}
 define foo {
   # do something to ${name}
 }
@@ -48,15 +48,15 @@ define foo {
 $bar = [ 'one', 'two', 'three' ]
 
 foo { $bar: }
-</code></pre>
+{% endcodeblock %}
 
 In Chef, I'd instead write it like this:
 
-<pre><code>
+{% codeblock lang:ruby %}
 %w{one two three}.each do |foo|
   # do something to #{foo}
 end
-</code></pre>
+{% endcodeblock %}
 
 For slightly harder things that rely on data structures such as arrays and hashes,
 Puppet makes it harder to clearly express what I want.  But there's a danger
@@ -73,7 +73,7 @@ during the compilation stage (unless you wrap the Ruby code within a "ruby_block
 resource declaration.)  The compilation stage executes before the execution stage -
 this can lead to things like this:
 
-<pre><code>
+{% codeblock lang:ruby %}
 # foobar.conf, before cookbook_file resource:
 hello
 
@@ -87,7 +87,7 @@ cookbook_file "/etc/foobar.conf" do
 end
 
 grab_state = %x[cat /etc/foobar.conf]
-</code></pre>
+{% endcodeblock %}
 
 grab_state will only be "hello" on the first execution of this recipe - otherwise,
 it will have the value "hi" in every other execution.  This might be confusing,
@@ -96,7 +96,7 @@ even if grab_state is located below "cookbook_file" in the recipe.
 This will do the right thing, if you expect "grab_state" to be given a value *after*
 "cookbook_file" does its thing:
 
-<pre><code>
+{% codeblock lang:ruby %}
 cookbook_file ...
 
 ruby_block "grab state" do
@@ -104,7 +104,7 @@ ruby_block "grab state" do
     grab_state = %x[cat /etc/foobar.conf]
   end
 end
-</code></pre>
+{% endcodeblock %}
 
 This is because we've now placed our arbitrary Ruby code within a Chef DSL resource,
 which is executed *after* the compilation phase.

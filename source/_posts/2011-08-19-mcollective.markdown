@@ -44,32 +44,29 @@ and since the server itself is reporting its metadata, information is always up
 to date.)  One example of using mcollective is to collect inventory information
 and compile a report:
 
-<em>inventory.mc:</em>
-<pre><code>
+{% codeblock inventory.mc lang:ruby %}
 inventory do
     format "%s:\t\t\t%s"
 
     fields { [ identity, facts["lsbdistdescription"] ] }
 end
-</code></pre>
+{% endcodeblock %}
 
-<em>Command:</em>
-<pre><code>
+{% codeblock mco command to run inventory.mc %}
 mco inventory --script=inventory.mc
-</code></pre>
+{% endcodeblock %}
 
-<em>Sample output:</em>
-<pre><code>
+{% codeblock Sample Output %}
 foobar1.example.com:	CentOS release 5.5 (Final)
 foobar2.example.com:	Ubuntu 11.04
-</code></pre>
+{% endcodeblock %}
 
 Another example is to kick off a Puppet run on all machines with the
 "country=us" fact, with no more than three concurrent runs at a time:
 
-<pre><code>
+{% codeblock %}
 mc-puppetd runonce -W country=us 3
-</code></pre>
+{% endcodeblock %}
 
 [Three Drunken SysAds](http://www.threedrunkensysadsonthe.net) also has a nice
 article on [using capistrano and

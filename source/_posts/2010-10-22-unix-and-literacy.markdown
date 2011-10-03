@@ -60,7 +60,8 @@ extremely hard to go back to any other paradigm.
 
 All I have to say is:
 
-<pre><code>$ echo "woot" | cowsay
+{% codeblock %}
+$ echo "woot" | cowsay
     _____
    < woot >
     -----
@@ -69,6 +70,6 @@ All I have to say is:
              (__)\       )\/\
                  ||----w |
                  ||     ||
-</code></pre>
+{% endcodeblock %}
 
 [this article]: http://theody.net/elements.html

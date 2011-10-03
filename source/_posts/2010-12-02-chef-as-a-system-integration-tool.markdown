@@ -65,11 +65,9 @@ instance, role[db-master] sets node[:mysql][:server][:role] = master, and
 similarly, role[db-slave] sets node[:mysql][:server][:role] = slave.
 
 *Figure 1: A slice of the role file for configuring the node's DB role.*
-<pre><code>
-...
+{% codeblock lang:ruby %}
 default_attributes "mysql" => { "server" => { "role" => "slave", ... } }
-...
-</code></pre>
+{% endcodeblock %}
 
 When the role is thrown into the run_list of a particular node, these
 attributes will be set under mysql.server and will be stored by chef-server.
@@ -80,14 +78,16 @@ or at the very least, setup slave replication if it isn't already setup.
 I use the search facility in chef-server in order to poll chef-server,
 grab the results and stuff them into a variable.
 
-*Figure 2: An example on using search in order to collect all of the DB slaves known to chef-server, then doing something to each of these nodes.*
-<pre><code>
+*Figure 2: An example on using search in order to collect all of the DB slaves
+known to chef-server, then doing something to each of these nodes.*
+
+{% codeblock lang:ruby %}
 db_slaves = search(:node, 'mysql_server_role:slave')
 db_slaves.each do |slave|
   # execute CHANGE MASTER TO query...
   # or maybe, puts "ohai #{slave[:fqdn]}!"
 end
-</code></pre>
+{% endcodeblock %}
 
 Now, of course, we need a way to **know** which binlog position and log file
 the slaves need to use from the master server.  Further, we need to allow
@@ -103,7 +103,8 @@ then pull those attributes out again on the slave machines.
 *Figure 3: Grab the master status from the master MySQL machine and throw them
 into attributes, then on the slave machines, pull those attributes out again
 and apply the changes to the slaves.*
-<pre><code>
+
+{% codeblock lang:ruby %}
 # Recipe snippet applied to master DB node
 ruby_block "master-log" do
   block do
@@ -144,7 +145,7 @@ ruby_block "import-master-log" do
   end
   action :create
 end
-</code></pre>
+{% endcodeblock %}
 
 Of course, you should REALLY add in checks to make sure you don't accidentally
 clobber your data - you really shouldn't be applying these things if the

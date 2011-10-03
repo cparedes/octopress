@@ -22,7 +22,7 @@ initial cost of converting things over isn't as painful as it would've been.)
 Here's a sample snippet of Puppet code that I'll be referring to for the rest
 of the article:
 
-<pre><code>
+{% codeblock lang:ruby %}
 class foobar {
   $version = "1.0.0"
   $tarball = "foobar-${version}.tar.gz"
@@ -57,7 +57,7 @@ class foobar {
                 "puppet:///modules/foobar/staticfile" ],
   }
 }
-</code></pre>
+{% endcodeblock %}
 
 Puppet resources port pretty well over to Chef resources - you simply have to
 make sure that you're using the right Chef resource when rewriting it (for
@@ -75,7 +75,7 @@ if you had mirrors of these files in each geographical area?
 
 Here's what our code will look like so far, given the above:
 
-<pre><code>
+{% codeblock lang:ruby %}
 # foobar/attributes/default.rb:
 default[:foobar][:version] = "1.0.0"
 default[:foobar][:tarball] = "foobar-#{node[:foobar][:version]}.tar.gz"
@@ -95,7 +95,7 @@ end
 #   ensure => directory,
 #   mode   => 0755,
 # }
-</code></pre>
+{% endcodeblock %}
 
 Now, what do we do with the exec resources?  There's still a few things that
 make sense to port directly to Chef's "execute" resources - things like
@@ -110,7 +110,7 @@ downloaded file md5sum hash matches? etc.)  Probably the simplest way to deal
 with this is to use a SHA256 hash in the remote_file resource - that's what
 we'll do in this next code example:
 
-<pre><code>
+{% codeblock lang:ruby %}
 # foobar/recipes/default.rb:
 remote_file "/opt/foobar/#{node[:foobar][:tarball]}" do
   source node[:foobar][:url]
@@ -124,7 +124,7 @@ end
 #   command => "wget ${url}",
 #   creates => "/opt/foobar/${tarball}",
 # }
-</code></pre>
+{% endcodeblock %}
 
 There isn't a way to do a simple existence check for the file before attempting
 to download it (like what we've done in our Puppet code above), but this is a
@@ -133,7 +133,7 @@ bit more robust for dealing with remote files.
 The tarball extraction exec resource in Puppet is easy to port over, and we'll
 just go ahead and just do a straight translation over to Chef:
 
-<pre><code>
+{% codeblock lang:ruby %}
 # foobar/recipes/default.rb:
 
 execute "extract tarball" do
@@ -160,7 +160,7 @@ end
 # file { "/opt/foobar/foobar-${version}/config.cfg":
 #   content => template("foobar/config.cfg.erb"),
 # }
-</code></pre>
+{% endcodeblock %}
 
 Since Chef executes things in order, we don't have to specify that the tarball
 extraction step must come before writing the template file - we simply place it
@@ -179,15 +179,15 @@ naming convention and trying to stick with it throughout Puppet module
 development.  In this case, we have file specificity broken up by hosts,
 and so we can create the following folders and files in our Chef cookbook:
 
-<pre><code>
+{% codeblock lang:ruby %}
 foobar/files/host-host1.example.com/staticfile
 foobar/files/host-host2.example.com/staticfile
 foobar/files/default/staticfile
-</code></pre>
+{% endcodeblock %}
 
 We then write the following in our recipe:
 
-<pre><code>
+{% codeblock lang:ruby %}
 # foobar/recipes/default.rb:
 
 cookbook_file "/opt/foobar/foobar-#{node[:foobar][:version]}/staticfile" do
@@ -198,7 +198,7 @@ end
 #   source => [ "puppet:///modules/foobar/staticfile.${hostname}",
 #               "puppet:///modules/foobar/staticfile" ],
 # }
-</code></pre>
+{% endcodeblock %}
 
 All in all, it's not too tough to port things over to Chef - there's nothing
 like [chef2puppet](https://github.com/relistan/chef2puppet) for converting

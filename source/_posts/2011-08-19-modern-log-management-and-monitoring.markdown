@@ -63,14 +63,14 @@ off.
 To show how all of this hooks up together, I hope this ASCII art drawing
 tides everyone over:
 
-<pre><code>
+{% codeblock %}
 syslog events
 -----------------> LOGSTASH -----> GRAYLOG2
                    /       \_____> ELASTICSEARCH
 app events    AMQP
 --------------/
 
-</code></pre>
+{% endcodeblock %}
 
 It'd be nice to throw everything into AMQP before having it processed by
 logstash, but it looked like it required either another logstash agent (to grab
@@ -82,21 +82,21 @@ have it setup seems to work just fine though, but YMMV.
 Logstash comes with support for 'grok', which is a library that allows you
 to group regex's into macros, so you can write a pattern like this:
 
-<pre><code>
+{% codeblock %}
 %{TIMESTAMP} %{USER} %{SYSLOGPROG} %{MESSAGE}
-</code></pre>
+{% endcodeblock %}
 
 instead of writing a huge, ugly regex for everything.  You can also assign
 names to a macro, which is used to structure the logs in logstash:
 
-<pre><code>
+{% codeblock %}
 %{TIMESTAMP:timestamp} %{USER:user} %{SYSLOGPROG:program} %{MESSAGE:message}
-</code></pre>
+{% endcodeblock %}
 
 The subsequent structure for the event will now look like this, assuming
 we wrote our macros as we did above:
 
-<pre><code>
+{% codeblock %}
 {
   @message => <whatever was matched in MESSAGE and assigned to @message>
   @fields => {
@@ -105,7 +105,7 @@ we wrote our macros as we did above:
                "program" => &lt;SYSLOGPROG&gt;
              }
 }
-</code></pre>
+{% endcodeblock %}
 
 (the patterns I've used above aren't exactly what's included in logstash, but
 hopefully it gets the point across as to how powerful grok + logstash can be.)
