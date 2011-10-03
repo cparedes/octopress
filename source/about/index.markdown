@@ -13,7 +13,7 @@ This is my personal technical blog.  I write about systems administration, as
 well as other things of interest, such as programming, music, and general
 advocacy for various technology related issues.
 
-This blog is hosted on a [prgmr](http://prgmr.com) VPS, running Debian Lenny.
+This blog is hosted on a [prgmr](http://prgmr.com) VPS, running Debian Squeeze.
 This website is available on both IPv4 and IPv6.
 
 I also manage this server with [Chef](http://opscode.com), which is pretty
