@@ -7,16 +7,62 @@
   font-family: Lucida Sans, Lucida Grande, Lucida Sans Unicode, sans-serif;
 }
 
+body > header {
+  text-align: center;
+}
+
 body > header h1 {
-  font-size: 3.4em;
   @extend .heading;
-  font-weight: normal;
+  font-size: 3em;
+}
+
+body > header h2 {
+  @extend .serif;
+}
+
+// Overrides for partials/blog.scss:
+
+article {
+  header {
+    text-align: center;
+    h1 {
+      font-size: 2.2em;
+    }
+    p.meta {
+      left: 50%;
+      margin-left: -50px;
+      padding-bottom: 0.5em;
+      @extend .serif;
+      font-style: italic;
+      text-transform: inherit;
+    }
+  }
+}
+
+// Overrides for partials/_navigation.scss:
+
+body > nav {
+  form {
+    input::-webkit-input-placeholder {
+      color: #ccc;
+    }
+    input:-moz-placeholder {
+      color: #ccc;
+    }
+  }
+  @media only screen and (min-width: 550px) {
+    a {
+      font-size:0.9em;
+    }
+  }
 }
 
 // Overrides for partials/sidebar/_base.scss:
 
 aside.sidebar {
   section {
-    @extend .serif;
+    p, ul {
+      @extend .serif;
+    }
   }
 }

@@ -4,7 +4,10 @@
 
 //$header-bg: #263347;
 //$subtitle-color: lighten($header-bg, 58);
-//$nav-bg: desaturate(lighten(#8fc17a, 18), 5);
+$nav-bg: desaturate(#666666, 8);
+$nav-color: lighten($nav-bg, 38);
+$nav-color-hover: lighten($nav-color, 25);
+$nav-placeholder: desaturate(lighten($nav-bg, 10), 15);
 //$sidebar-bg: desaturate(#eceff5, 8);
 $sidebar-color: desaturate(#cccccc, 8);
 $sidebar-bg: desaturate(#333333, 8);

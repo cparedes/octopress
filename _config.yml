@@ -4,7 +4,7 @@
 
 url: http://redbluemagenta.com
 title: redbluemagenta
-subtitle: are you still there?
+subtitle: a blog curated/written/whatever by christian 'ian' paredes
 author: Christian Paredes
 simple_search: http://google.com/search
 sidebar: collapse
@@ -76,7 +76,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: redbluemagenta
 disqus_show_comment_count: false
 
 # Google Analytics
