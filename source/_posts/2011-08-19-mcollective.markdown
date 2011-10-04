@@ -52,7 +52,7 @@ inventory do
 end
 {% endcodeblock %}
 
-{% codeblock mco command to run inventory.mc %}
+{% codeblock mco command %}
 mco inventory --script=inventory.mc
 {% endcodeblock %}
 
