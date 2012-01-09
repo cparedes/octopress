@@ -8,9 +8,7 @@ categories:
 - Service Orchestration
 ---
 
-There's times when we need to enforce adhoc control over our machines. [This
-blog post by Alex
-Honor](http://dev2ops.org/blog/2011/2/16/peanut-butter-in-my-chocolate-convergence-vs-ad-hoc-control.html)
+There's times when we need to enforce adhoc control over our machines. [This blog post by Alex Honor](http://dev2ops.org/blog/2011/2/16/peanut-butter-in-my-chocolate-convergence-vs-ad-hoc-control.html)
 does a way better job than I could to explain why we still need to worry about
 adhoc command execution, but a quick summary would probably be the following:
 
@@ -57,8 +55,7 @@ I would probably say that they're actually complimentary with each other -
 mcollective is incredibly nice, in that it has a bit of a better paradigm for
 executing commands across a fleet of hosts (pub/sub vs. SSH in a for loop.) You
 can actually use mcollective as an execution provider in RunDeck, by simply
-specifying 'mco' as the executor in the config file ([here's a great example of
-this.](https://github.com/phobos182/rundeck-mcollective/blob/master/framework.properties))
+specifying 'mco' as the executor in the config file ([here's a great example of this.](https://github.com/phobos182/rundeck-mcollective/blob/master/framework.properties))
 RunDeck is nice, in that you can use arbitrary scripts with RunDeck and it'll
 happily use them for execution - plus, it has a GUI, which makes it nice if you
 need to provide a 'one button actiony thing' for anyone else to use. RunDeck
