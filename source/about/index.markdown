@@ -30,9 +30,8 @@ About me
 
 {% img left /images/ian.jpg This is Ian %}
 
-I'm a systems administrator at [Seattle Biomedical Research
-Institute](http://seattlebiomed.org).  My language of choice is Ruby, though I
-can write Python and debug Java programs in a pinch.
+I'm a systems administrator at [Shopply](http://shopply.com).  My language of
+choice is Ruby, though I can write Python and debug Java programs in a pinch.
 
 I started in systems administration not too long ago, though I've been running
 Linux servers in my house since about 12 or so years ago.  I fell in love with
@@ -41,7 +40,10 @@ administration.
 
 In my off time, I play a few computer games (Civilization, Battlefield, Total
 War), and I also program and contribute to a few open source projects (though
-they're usually small patches as well as bug reports - I do what I can.)
+they're usually small patches as well as bug reports - I do what I can.) I read
+a lot of technical articles to keep myself up to date on what's going on in the
+community, as well as keeping myself fresh with papers on distributed
+computing.
 
 I currently live with my girlfriend, Sara.  [She has a page hosted on
 redbluemagenta as well](http://sara.redbluemagenta.com), and she's probably way
