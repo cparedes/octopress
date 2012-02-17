@@ -46,6 +46,5 @@ a lot of technical articles to keep myself up to date on what's going on in the
 community, as well as keeping myself fresh with papers on distributed
 computing.
 
-I currently live with my girlfriend, Sara.  [She has a page hosted on
-redbluemagenta as well](http://sara.redbluemagenta.com), and she's probably way
+I currently live with my girlfriend, Sara.  [She has a page hosted on redbluemagenta as well](http://sara.redbluemagenta.com), and she's probably way
 better at Python than I am.
