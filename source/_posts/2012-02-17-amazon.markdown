@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Amazon"
+date: 2012-02-17 14:00
+comments: true
+categories:
+- Job
+- Systems Administration
+---
+
+On the 27th of February, I start at Amazon as a systems engineer in the AWS
+Cloudfront team.
+
+I can't even say how excited I am - I've been wanting to be at Amazon for the
+longest time now, and I finally did it. I'm at fucking Amazon, working with
+a large installation that has way more machines than I could even fathom.
+
+I'll continue to blog here, but when it comes to work related things, I'll
+have to keep a tight lip. Sorry folks. I'm not sure what this means exactly
+in terms of the kinds of posts I've made so far (mostly reviews and quick
+guides of various software), but I'd imagine those types of posts will
+likely be a lot less frequent. What I would *like* to do instead, is talk
+about other things that I might be doing on my off time - this means
+board games, other OSS software that I'm working on, music, and movies.
+
+Anyway, this doesn't mean the death of this blog - I hope this actually
+spurs more discussion on a wider variety of things.
+
+Cheers, gl, hf, etc. etc.
