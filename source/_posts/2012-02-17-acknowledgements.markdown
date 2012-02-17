@@ -44,6 +44,10 @@ a mid-level systems administrator. Thanks so much.
 * Mike Sawicki: though we haven't really worked together much, your insight
 and advice have helped me a lot. You've also provided a ton of awesome career
 advice and have shown me a lot of awesome shit in the industry, too.
+* David Lemphers: for being an awesome mentor. We differed a lot in how we
+approached problems, but it was damn healthy, and it was some of the better
+discussions I had while approaching computing problems. Further, you've
+showed me a lot of awesome ways to create distributed systems.
 
 Again, let me know if I've missed anyone. (If you're not listed, it doesn't
 mean I don't appreciate you - I certainly do! I've been blessed with knowing
