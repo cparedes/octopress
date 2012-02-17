@@ -30,8 +30,9 @@ About me
 
 {% img left /images/ian.jpg This is Ian %}
 
-I'm a systems administrator at [Shopply](http://shopply.com).  My language of
-choice is Ruby, though I can write Python and debug Java programs in a pinch.
+I'm a (future) systems engineer at Amazon AWS (will be starting there soon.)
+My language of choice is Ruby, though I can write Python and debug Java
+programs in a pinch.
 
 I started in systems administration not too long ago, though I've been running
 Linux servers in my house since about 12 or so years ago.  I fell in love with
