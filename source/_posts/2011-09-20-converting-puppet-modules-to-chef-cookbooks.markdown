@@ -16,7 +16,7 @@ Puppet modules over to Chef cookbooks (by hand) to see how it'd all turn out.
 We've not yet decided whether we will actually use Chef in production, but I
 figure that if I've lowered the bar of entry, it would make the decision much
 easier (we'd still have to worry about whether the technical merits justify
-putting in time to transition everything over to Puppet, but at least the
+putting in time to transition everything over to Chef, but at least the
 initial cost of converting things over isn't as painful as it would've been.)
 
 Here's a sample snippet of Puppet code that I'll be referring to for the rest
