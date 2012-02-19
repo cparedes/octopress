@@ -9,7 +9,7 @@ categories:
 I just wanted to write a new blog post about all the folks who have helped me,
 mentored me, and otherwise gave a ton of support during the past few years
 of my career. I'm incredibly thankful for everyone's support over the years,
-and I can't have made it to this point without you guys. Thanks.
+and I couldn't have made it to this point without you guys. Thanks.
 
 If I forgot you, let me know.
 
