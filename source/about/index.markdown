@@ -30,7 +30,7 @@ About me
 
 {% img left /images/ian.jpg This is Ian %}
 
-I'm a (future) systems engineer at Amazon AWS (will be starting there soon.)
+I'm a systems engineer for [Amazon AWS Cloudfront](http://aws.amazon.com/cloudfront/).
 My language of choice is Ruby, though I can write Python and debug Java
 programs in a pinch.
 
