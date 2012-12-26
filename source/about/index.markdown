@@ -30,7 +30,8 @@ About me
 
 {% img left /images/ian.jpg This is Ian %}
 
-I'm a systems engineer for [Amazon AWS Cloudfront](http://aws.amazon.com/cloudfront/) and [Amazon AWS Route 53](http://aws.amazon.com/route53/).
+I'm a systems engineer for the [AWS Management Console Core](http://aws.amazon.com).
+
 My language of choice is Ruby, though I can write Python and debug Java
 programs in a pinch.
 
@@ -45,6 +46,3 @@ they're usually small patches as well as bug reports - I do what I can.) I read
 a lot of technical articles to keep myself up to date on what's going on in the
 community, as well as keeping myself fresh with papers on distributed
 computing.
-
-I currently live with my girlfriend, Sara.  [She has a page hosted on redbluemagenta as well](http://sara.redbluemagenta.com), and she's probably way
-better at Python than I am.
